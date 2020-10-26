@@ -1,0 +1,26 @@
+{
+  "name": "construction-standards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server .",
+    "update": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShirokoMax/Construction-Standards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShirokoMax/Construction-Standards/issues"
+  },
+  "homepage": "https://github.com/ShirokoMax/Construction-Standards#readme",
+  "devDependencies": {
+    "playwright": "^1.5.1"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
