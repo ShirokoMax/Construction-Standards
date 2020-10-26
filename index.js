@@ -23,8 +23,8 @@ finalData.structuralSteel = [];
   
   
   for(let item of startData.structuralSteel){
-  
-  await page.goto(`${item.url}`);
+  let url = item.url;
+  await page.goto(`${url}`);
 
   // const name = await page.$eval('h1', i => i.textContent);
   const name = await page.$eval('xpath=//html/body >> css=table.status >> "Название документа:"', 
@@ -72,7 +72,7 @@ finalData.structuralSteel = [];
   const doc = `${docType} ${docNumber}`;
 
   finalData.structuralSteel.push({
-      "url": "http://docs.cntd.ru/document/1200133727",
+      url,
       doc,
       name,
       status,
@@ -102,25 +102,3 @@ finalData.structuralSteel = [];
   await browser.close();
   console.log('Time: ', Date.now() - start, ' ms');
 })();
-
-
-
-// http://docs.cntd.ru/document/1200133727/
-// http://docs.cntd.ru/document/1200001512
-
-//  	ТУ 36.26.11-5-89 Листы стальные просечно-вытяжные
-// http://docs.cntd.ru/document/1200052960
-
-
-// ГОСТ 19903-2015
-// http://docs.cntd.ru/document/1200133726
-
-// {
-//   "url": "http://docs.cntd.ru/document/1200001512",
-//   "doc": "ГОСТ 8732-78",
-//   "name": "ГОСТ 8732-78 Трубы стальные бесшовные горячедеформированные. Сортамент (с Изменениями N 1, 2)",
-//   "status": "Действующий",
-//   "adoptionDate": "22 марта 1978",
-//   "effectiveDate": "01 января 1979",
-//   "revisionDate": "01 января 2004"
-// }
